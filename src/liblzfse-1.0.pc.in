@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @PACKAGE_NAME@
+Description: LZFSE compression library and command line tool 
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -llzfse-1.0
+Cflags: -I${includedir}
