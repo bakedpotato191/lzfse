@@ -15,7 +15,7 @@ dnl libtool versioning
 #                 changes to the signature and the semantic)
 #  ? :+1 : ?   == just internal changes
 # CURRENT : REVISION : AGE
-LIBLZFSE_SO_VERSION=3:0:0
+LIBLZFSE_SO_VERSION=1:0:0
 
 AC_SUBST(LIBLZFSE_SO_VERSION)
 
@@ -91,7 +91,7 @@ m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 AC_CONFIG_FILES([
 Makefile
 src/Makefile
-src/liblzfse-1.0.pc
+src/liblzfse.pc
 include/Makefile
 tools/Makefile
 ])

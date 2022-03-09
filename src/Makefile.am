@@ -7,11 +7,13 @@ AM_CFLAGS = \
 	$(LFS_CFLAGS) \
 	$(PTHREAD_CFLAGS)
 
-AM_LDFLAGS = $(PTHREAD_LIBS)
+AM_LDFLAGS = \
+	$(GLOBAL_LDFLAGS)  \
+	$(PTHREAD_LIBS)
 
-lib_LTLIBRARIES = liblzfse-1.0.la
-liblzfse_1_0_la_LDFLAGS = $(AM_LDFLAGS) -version-info $(LIBLZFSE_SO_VERSION) -no-undefined
-liblzfse_1_0_la_SOURCES = \
+lib_LTLIBRARIES = liblzfse.la
+liblzfse_la_LDFLAGS = $(AM_LDFLAGS) -version-info $(LIBLZFSE_SO_VERSION) -no-undefined
+liblzfse_la_SOURCES = \
 	lzfse_decode.c lzfse_tunables.h \
 	lzfse_decode_base.c lzfse_internal.h \
 	lzfse_encode.c lzfse_encode_tables.h \
@@ -21,8 +23,8 @@ liblzfse_1_0_la_SOURCES = \
 	lzvn_encode_base.c lzvn_encode_base.h
 	
 if WIN32
-liblzfse_1_0_la_LDFLAGS += -avoid-version
+liblzfse_la_LDFLAGS += -avoid-version
 endif
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = liblzfse-1.0.pc
+pkgconfig_DATA = liblzfse.pc

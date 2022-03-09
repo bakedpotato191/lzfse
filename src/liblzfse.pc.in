@@ -6,5 +6,5 @@ includedir=@includedir@
 Name: @PACKAGE_NAME@
 Description: LZFSE compression library and command line tool 
 Version: @PACKAGE_VERSION@
-Libs: -L${libdir} -llzfse-1.0
+Libs: -L${libdir} -llzfse
 Cflags: -I${includedir}

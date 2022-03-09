@@ -34,8 +34,8 @@ Makefile
 py-compile
 stamp-h1
 src/.libs
-src/liblzfse-1.0.pc
-!src/liblzfse-1.0.pc.in
+src/liblzfse.pc
+!src/liblzfse.pc.in
 tools/.libs/*
 tools/lzfse
 

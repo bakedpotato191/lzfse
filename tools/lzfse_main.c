@@ -21,6 +21,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
 // LZFSE command line tool
 
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
+#define TOOL_NAME "lzfse"
+
 #if !defined(_POSIX_C_SOURCE) || (_POSIX_C_SOURCE < 200112L)
 #  undef _POSIX_C_SOURCE
 #  define _POSIX_C_SOURCE 200112L
